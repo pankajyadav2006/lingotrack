@@ -1,5 +1,26 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Environment
 .env
-dist
-.vscode
+
+# Build output
+dist/
+dist-ssr/
+
+# Logs
 *.log
+debug.log
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Local overrides
+*.local
