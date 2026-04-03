@@ -17,8 +17,8 @@ const toLangCode = (lang) => {
 // This bypasses CORS and browser bot-detection issues
 const buildGoogleTTSUrl = (text, lang, rate = 1) => {
   const langCode = toLangCode(lang);
-  // Using the backend proxy on :5050
-  return `http://127.0.0.1:5050/api/tts?text=${encodeURIComponent(text)}&lang=${langCode}&rate=${rate}`;
+  const base = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:5050/api';
+  return `${base}/tts?text=${encodeURIComponent(text)}&lang=${langCode}&rate=${rate}`;
 };
 
 // ─── Fallback: Web Speech API ─────────────────────────────────────────────────
